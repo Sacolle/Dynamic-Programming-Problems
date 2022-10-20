@@ -3,10 +3,6 @@
 
 using namespace std;
 
-int min(int a,int b){
-	return a < b ? a : b;
-}
-
 /*
 * problema: https://www.spoj.com/problems/MIXTURES/
 * A sacada do problema é gerar uma matriz bidimensional com todos os possíveis valores acumulados das poções.
@@ -18,6 +14,10 @@ int min(int a,int b){
 * sabe-se que é o valor do range (0,0) 40 % 100, ou seja, o index 0,0 da matriz, vezes o range (1,2) 80 % 100.  
 * Pois o index i j da matriz é o valor da soma de i a j.
 */
+
+int min(int a,int b){
+	return a < b ? a : b;
+}
 
 int mix(int i, int j,vector<int> &pot,vector<vector<int>> &acc,vector<vector<int>> &mem){
 	if(i == j)
